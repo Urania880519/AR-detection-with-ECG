@@ -1,4 +1,5 @@
-# The source code of "Correlating Electrocardiograms with Echocardiographic Parameters in Hemodynamically-Significant Aortic Regurgitation Using Deep Learning"
+# About 
+The source code of "Correlating Electrocardiograms with Echocardiographic Parameters in Hemodynamically-Significant Aortic Regurgitation Using Deep Learning"
 
 
 
