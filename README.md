@@ -6,9 +6,18 @@ The source code of "Correlating Electrocardiograms with Echocardiographic Parame
 
 
 # Files
+The dataset is composed of a mixtutre of Japanese and Taiwanese data
 * Model training and validation: main.py  
 * Dataset preperation: dataset.py  
 * Testing code: test.py  
 * Shapley value calculation and visualization: SHAP.py  
+  
+We also provide the version of code to train the model only on Taiwanese dataset and finetune on Japanese dataset
+* Please refer to the transfer_learning.sh
 
 
+# Models
+* Base: models weights trained solely on Taiwanese dataset
+* MixedData: models trained on Taiwanese+Japanese dataset
+* Finetuned: models finetuned on the Japanese dataset
+  
