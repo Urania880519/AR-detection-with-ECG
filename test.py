@@ -224,7 +224,7 @@ for s, fd in enumerate(folds):
     val_dataset= ECG_AR('val', data_dir, label_csv, val_folds, leads, targets)
     val_loader= DataLoader(val_dataset, batch_size=32, shuffle= False, num_workers= 4, pin_memory= True)
     net = resnet34(input_channels=15, num_classes=len(targets)).to(device)
-    state_dict= torch.load(f'/raid/data/tewei/ExVal_JP/model/resnet34_{jp}_{database}_{s}_{leads}_best.pth')
+    state_dict= torch.load(f'./models/MixData_{s}.pth')
     net.load_state_dict(state_dict)
     net.eval()
     nets.append(net)

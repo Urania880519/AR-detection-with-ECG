@@ -83,7 +83,7 @@ def evaluate(dataloader, net, args, criterion, device, epoch=0, cv_fold_num=0):
     print('Avg AUPRC: %.4f' % avg_auprc)
     if avg_auc > args.best_metric:
         args.best_metric = avg_auc
-        torch.save(net.state_dict(), f'/data/tewei/ExVal_JP/model/resnet34_{args.jp}_{database}_{cv_fold_num}_{args.leads}_best.pth')
+        torch.save(net.state_dict(), f'./models/MixData_{s}.pth')
         print('Model Saved! ', avg_auc)
     return aucs, auprcs, f1s
     # if args.phase == 'train' and avg_f1 > args.best_metric:
@@ -194,7 +194,7 @@ if __name__ == "__main__":
 
             
 
-    net.load_state_dict(torch.load(f'/data/tewei/ExVal_JP/model/resnet34_{jp}_{database}_{s}_{args.leads}_best.pth', map_location=device))
+    net.load_state_dict(torch.load(f'./models/MixData_{s}.pth', map_location=device))
     aucs, auprcs, f1s = evaluate(test_loader, net, args, criterion, device)
     writer.writerow(['Test', 'Test', 'aucs']+aucs.tolist())
     writer.writerow(['Test', 'Test', 'auprcs']+ auprcs.tolist())
