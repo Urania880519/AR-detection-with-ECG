@@ -21,3 +21,5 @@ We also provide the version of code to train the model only on Taiwanese dataset
 * MixedData: models trained on Taiwanese+Japanese dataset
 * Finetuned: models finetuned on the Japanese dataset
   
+# Citation
+    Li YT, Chiang KC, Shieh AT, et al. Correlating Electrocardiograms with Echocardiographic Parameters in Hemodynamically-Significant Aortic Regurgitation Using Deep Learning. Acta Cardiol Sin. 2024;40(6):762-780. doi:10.6515/ACS.202411_40(6).20240918B
